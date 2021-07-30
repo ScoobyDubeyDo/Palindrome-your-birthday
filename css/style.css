@@ -6,6 +6,7 @@
     --basic-color: #f1f2f3;
     color: var(--dark-color);
     user-select: none;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -30,7 +31,8 @@ header,
 #container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     height: 100vh;
 }
 
@@ -42,12 +44,18 @@ header {
 
 header > .hero,
 #container > #main,
-footer {
+footer,
+.repo-link {
     padding: 20px;
     border-radius: 20px;
     border: var(--dark-color) dashed 5px;
     background: #f55f44c4;
     max-width: 800px;
+    color: var(--basic-color);
+}
+
+.repo-link > a {
+    text-decoration: none;
     color: var(--basic-color);
 }
 

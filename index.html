@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
             rel="shortcut icon"
-            href="./favicon/favicon.gif"
+            href="./favicon/favicon.png"
             type="image/x-icon"
         />
         <link rel="stylesheet" href="./css/style.css" />
@@ -14,6 +14,13 @@
     </head>
     <body>
         <header>
+            <div class="repo-link">
+                <a
+                    href="https://github.com/aman-can/Palindrome-your-birthday"
+                    target="_blank"
+                    >Github repo</a
+                >
+            </div>
             <div class="hero">
                 <h1>
                     Check out if your
@@ -21,8 +28,8 @@
                     <span class="diff-color">palindrome</span>.
                 </h1>
                 <p>
-                    A palindrome is a word or a set of numbers which reads the same backward
-                    as forward
+                    A palindrome is a word or a set of numbers which reads the
+                    same backward as forward
                 </p>
                 <a href="#container">Let's Go</a>
             </div>
@@ -39,12 +46,14 @@
                     Aug 1995, then app will check for 19950801, 01081995,
                     080195, 1081995
                 </p>
-                <input type="date" name="birthday" id="birthday" required />
-                <button type="submit">check</button>
+                <input type="date" name="birthday" id="birthday" />
+                <button type="submit" id="btn">check</button>
                 <div class="output">
-                    <img class="image" src="./image/happy.gif" />
-                    Awww! Your birthdate is not palindrome. Nearest palindrome
-                    date is 2021-12-02 You missed it by 146 days.
+                    <img class="image" src="./image/wink.gif" />
+                    <p class="result">
+                        The output will be displayed here. Now let's get
+                        started, shall we?
+                    </p>
                 </div>
             </div>
         </section>
@@ -77,4 +86,5 @@
             </ul>
         </footer>
     </body>
+    <script src="./js/main.js"></script>
 </html>

@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,700;1,400&display=swap");
+:root {
+    --dark-color: #001e6b;
+    --light-color: #5089c6;
+    --contrast-color: #f55f44;
+    --basic-color: #f1f2f3;
+    color: var(--dark-color);
+    user-select: none;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(
+        48deg,
+        rgba(0, 30, 107, 0.7) 0%,
+        rgba(80, 137, 198, 0.7) 50%,
+        rgba(245, 95, 68, 0.7) 100%
+    );
+    background-attachment: fixed;
+}
+
+header,
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    background: url(/image/hug.gif) no-repeat center;
+    background-attachment: fixed;
+    background-position: top;
+}
+
+header > .hero,
+#container > #main,
+footer {
+    padding: 20px;
+    border-radius: 20px;
+    border: var(--dark-color) dashed 5px;
+    background: #f55f44c4;
+    max-width: 800px;
+    color: var(--basic-color);
+}
+
+#container > #main > h2 {
+    color: var(--dark-color);
+}
+
+#container > #main > * {
+    display: block;
+    margin: 2vh;
+}
+
+#container > #main > #birthday {
+    padding: 10px;
+    outline: none;
+    width: 70%;
+    border: var(--dark-color) dashed 1px;
+    border-radius: 20px;
+}
+
+.diff-color,
+#main {
+    color: var(--dark-color);
+}
+
+header > .hero > * {
+    margin: 20px;
+}
+
+header > .hero > h1 {
+    font-size: 50px;
+}
+
+header > .hero > a,
+#container > #main > button {
+    background: var(--light-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--basic-color);
+    outline: none;
+    cursor: pointer;
+    border: var(--dark-color) dashed 2px;
+}
+
+header > .hero > a:active,
+#container > #main > button:active {
+    border: var(--dark-color) solid 2px;
+}
+
+#container > #main > .output {
+    border: var(--dark-color) dashed 5px;
+    margin: 0px auto;
+    border-radius: 20px;
+    max-width: 70%;
+    padding: 20px;
+    background: #5089c6b9;
+}
+
+#container > #main > .output > * {
+    display: block;
+}
+
+#container > #main > .output > .image {
+    max-width: 70%;
+    margin: 0px auto;
+}
+
+footer {
+    margin: 60px auto 0px auto;
+}
+
+footer > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+footer > ul > li {
+    margin: 10px 50px;
+}
+
+footer > ul > li > a {
+    text-decoration: none;
+    color: var(--basic-color);
+}
+
+@media (max-width: 480px) /* Mobile */ {
+    header > .hero > h1 {
+        font-size: 30px;
+    }
+
+    header > .hero,
+    #container > #main,
+    footer {
+        padding: unset;
+    }
+    header > .hero,
+    #container > #main {
+        padding-bottom: 15px;
+    }
+    footer > ul {
+        flex-direction: column;
+        align-content: center;
+    }
+}

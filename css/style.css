@@ -109,6 +109,7 @@ header > .hero > a:active,
 #container > #main > .output {
     border: var(--dark-color) dashed 5px;
     margin: 0px auto;
+    text-align: center;
     border-radius: 20px;
     max-width: 70%;
     padding: 20px;
@@ -148,7 +149,6 @@ footer > ul > li > a {
     header > .hero > h1 {
         font-size: 30px;
     }
-
     header > .hero,
     #container > #main,
     footer {

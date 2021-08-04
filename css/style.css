@@ -125,6 +125,13 @@ header > .hero > a:active,
     margin: 0px auto;
 }
 
+#container > #main > .output > #sad,
+#container > #main > .output > #happy,
+#container > #main > .output > #unimpressed,
+#container > #main > .output > #think {
+    display: none;
+}
+
 footer {
     margin: 60px auto 0px auto;
 }

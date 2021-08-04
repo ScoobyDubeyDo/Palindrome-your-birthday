@@ -1,21 +1,25 @@
 let inputBx = document.querySelector("#birthday");
 let button = document.querySelector("#btn");
-let img = document.querySelector(".image");
+let wink = document.querySelector("#wink");
+let sad = document.querySelector("#sad");
+let happy = document.querySelector("#happy");
+let unimpressed = document.querySelector("#unimpressed");
+let think = document.querySelector("#think");
 let output = document.querySelector(".result");
 
 button.addEventListener("click", () => {
     setTimeout(() => {
         displayMessage(inputBx.value);
     }, 2500);
-    img.src = "./image/think.gif";
+    displayImage("think");
     output.innerText = "loading....";
 });
 
 const displayMessage = (day) => {
     if (day === "") {
         output.innerText =
-            "Please select a date first to get started , Please don't leave it blank.";
-        img.src = "./image/Unimpressed.gif";
+            "Please select a date first to get started , Please don't leave it blank. Just wasted my time";
+        displayImage("unimpressed");
     } else {
         if (checkPalindrome(day)[0]) {
             output.innerText = `Whoa!!! Your birthdate in format ${
@@ -25,7 +29,8 @@ const displayMessage = (day) => {
                 "-" +
                 checkPalindrome(day)[3]
             } is palindrome`;
-            img.src = "./image/happy.gif";
+
+            displayImage("happy");
         } else {
             output.innerText = `Awww! Your birthdate is not palindrome. Nearest palindrome date is ${
                 getNearestPalindromDate(day)[0][1] +
@@ -34,7 +39,7 @@ const displayMessage = (day) => {
                 "-" +
                 getNearestPalindromDate(day)[0][3]
             } You missed it by ${getNearestPalindromDate(day)[1]} days.`;
-            img.src = "./image/sad.gif";
+            displayImage("sad");
         }
     }
 };
@@ -124,5 +129,39 @@ const makeTwoDigits = (digit) => {
         return "0".concat(digit);
     } else {
         return digit;
+    }
+};
+
+const displayImage = (img) => {
+    if (img === "think") {
+        sad.style.display = "none";
+        happy.style.display = "none";
+        unimpressed.style.display = "none";
+        wink.style.display = "none";
+        think.style.display = "block";
+    } else if (img === "happy") {
+        sad.style.display = "none";
+        happy.style.display = "block";
+        unimpressed.style.display = "none";
+        wink.style.display = "none";
+        think.style.display = "none";
+    } else if (img === "sad") {
+        sad.style.display = "block";
+        happy.style.display = "none";
+        unimpressed.style.display = "none";
+        wink.style.display = "none";
+        think.style.display = "none";
+    } else if (img === "unimpressed") {
+        sad.style.display = "none";
+        happy.style.display = "none";
+        unimpressed.style.display = "block";
+        wink.style.display = "none";
+        think.style.display = "none";
+    } else {
+        sad.style.display = "none";
+        happy.style.display = "none";
+        unimpressed.style.display = "none";
+        wink.style.display = "block";
+        think.style.display = "none";
     }
 };
